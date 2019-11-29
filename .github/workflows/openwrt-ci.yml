@@ -12,9 +12,9 @@ name: OpenWrt-CI
 on:
   schedule:
     - cron: 0 20 * * *
-  push:
-    branches: 
-    - master
+  # push:
+  #   branches: 
+  #   - master
 
 jobs:
   build:
@@ -93,6 +93,22 @@ jobs:
           # 
           # 无论你想要对固件进行怎样的定制, 都需要且只需要修改 EOF 回环内的内容.
           # 
+          
+          
+          # mevbu 支持:
+          cat >> .config <<EOF
+            CONFIG_TARGET_mvebu=y
+            CONFIG_TARGET_mvebu_cortexa9=y
+            CONFIG_TARGET_mvebu_cortexa9_DEVICE_linksys_wrt1200ac=y
+            CONFIG_HAS_SUBTARGETS=y
+            CONFIG_HAS_DEVICES=y
+            CONFIG_TARGET_BOARD="mvebu"
+            CONFIG_TARGET_SUBTARGET="cortexa9"
+            CONFIG_TARGET_PROFILE="DEVICE_linksys_wrt1200ac"
+            CONFIG_TARGET_ARCH_PACKAGES="arm_cortex-a9_vfpv3"
+            CONFIG_DEFAULT_TARGET_OPTIMIZATION="-Os -pipe"
+            CONFIG_CPU_TYPE="cortex-a9+vfpv3"
+          EOF
 
           # 固件压缩:
           cat >> .config <<EOF
@@ -136,7 +152,10 @@ jobs:
             CONFIG_PACKAGE_luci-app-minidlna=y
           #   CONFIG_PACKAGE_luci-app-openvpn=y
           #   CONFIG_PACKAGE_luci-app-openvpn-server=y
+            CONFIG_PACKAGE_luci-app-shadowsocks-libev=y
             CONFIG_PACKAGE_luci-app-smartinfo=y
+            CONFIG_PACKAGE_luci-app-sqm=y
+            CONFIG_PACKAGE_luci-app-upnp=y
             CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
             CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
             # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
@@ -162,7 +181,7 @@ jobs:
             # CONFIG_PACKAGE_nano=y
             # CONFIG_PACKAGE_screen=y
             CONFIG_PACKAGE_tree=y
-            # CONFIG_PACKAGE_vim-fuller=y
+            CONFIG_PACKAGE_vim-fuller=y
             CONFIG_PACKAGE_wget=y
           EOF
 
@@ -171,6 +190,31 @@ jobs:
           #   # CONFIG_TARGET_IMAGES_PAD is not set
           #   # CONFIG_VMDK_IMAGES is not set
           # EOF
+          
+          #
+          # Target Images
+          #
+          cat >> .config <<EOF
+            CONFIG_TARGET_ROOTFS_INITRAMFS=y
+            CONFIG_TARGET_INITRAMFS_COMPRESSION_NONE=y
+            CONFIG_EXTERNAL_CPIO=""
+          EOF
+          
+          #
+          # SSL
+          #
+          cat >> .config <<EOF
+            CONFIG_PACKAGE_libmbedtls=y
+            CONFIG_PACKAGE_libopenssl=y
+          EOF
+          
+          #
+          # 1. Collections
+          #
+          cat >> .config <<EOF
+            CONFIG_PACKAGE_luci=y
+            CONFIG_PACKAGE_luci-ssl-openssl=y
+          EOF
 
           # 
           # 固件定制部分结束.
