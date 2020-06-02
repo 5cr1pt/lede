@@ -73,10 +73,8 @@ jobs:
           CONFIG_ARCH="arm"
 
           CONFIG_PACKAGE_luci-app-cpufreq=y
-          CONFIG_PACKAGE_wireguard-tools=y
-          CONFIG_PACKAGE_luci-app-wireguard=y
-          CONFIG_PACKAGE_luci-proto-wireguard=y
-
+          CONFIG_DEFAULT_luci-app-ssr-plus=y
+          CONFIG_DEFAULT_luci-app-unblockmusic=y
           EOF
 
           #
