@@ -68,62 +68,93 @@ jobs:
           # CONFIG_PACKAGE_antfs-mount is not set
           # CONFIG_PACKAGE_automount is not set
           # CONFIG_PACKAGE_autosamba is not set
-          # CONFIG_PACKAGE_iptables-mod-ipsec is not set
-          # CONFIG_PACKAGE_kmod-crypto-cbc is not set
+          CONFIG_PACKAGE_frpc=m
+          CONFIG_PACKAGE_iptables-mod-ipsec=m
+          CONFIG_PACKAGE_kmod-crypto-acompress=m
+          CONFIG_PACKAGE_kmod-crypto-cbc=m
           # CONFIG_PACKAGE_kmod-crypto-crc32c is not set
-          # CONFIG_PACKAGE_kmod-crypto-deflate is not set
-          # CONFIG_PACKAGE_kmod-crypto-des is not set
-          # CONFIG_PACKAGE_kmod-crypto-echainiv is not set
-          # CONFIG_PACKAGE_kmod-crypto-hmac is not set
-          # CONFIG_PACKAGE_kmod-crypto-md5 is not set
-          # CONFIG_PACKAGE_kmod-fast-classifier is not set
+          CONFIG_PACKAGE_kmod-crypto-deflate=m
+          CONFIG_PACKAGE_kmod-crypto-des=m
+          CONFIG_PACKAGE_kmod-crypto-echainiv=m
+          CONFIG_PACKAGE_kmod-crypto-hmac=m
+          CONFIG_PACKAGE_kmod-crypto-md5=m
           # CONFIG_PACKAGE_kmod-fs-antfs is not set
           # CONFIG_PACKAGE_kmod-fs-exfat is not set
           # CONFIG_PACKAGE_kmod-fs-ext4 is not set
-          # CONFIG_PACKAGE_kmod-ipsec is not set
-          # CONFIG_PACKAGE_kmod-ipt-ipsec is not set
-          # CONFIG_PACKAGE_kmod-iptunnel6 is not set
+          CONFIG_PACKAGE_kmod-ipsec=m
+          CONFIG_PACKAGE_kmod-ipsec4=m
+          CONFIG_PACKAGE_kmod-ipsec6=m
+          CONFIG_PACKAGE_kmod-ipt-ipsec=m
+          CONFIG_PACKAGE_kmod-iptunnel4=m
+          CONFIG_PACKAGE_kmod-iptunnel6=m
           # CONFIG_PACKAGE_kmod-lib-crc16 is not set
-          # CONFIG_PACKAGE_kmod-nf-conntrack-netlink is not set
+          CONFIG_PACKAGE_kmod-lib-zlib-deflate=m
+          CONFIG_PACKAGE_kmod-lib-zlib-inflate=m
+          CONFIG_PACKAGE_kmod-nf-conntrack-netlink=m
           # CONFIG_PACKAGE_kmod-scsi-core is not set
-          # CONFIG_PACKAGE_kmod-shortcut-fe is not set
-          # CONFIG_PACKAGE_kmod-tcp-bbr is not set
-          # CONFIG_PACKAGE_kmod-tun is not set
+          CONFIG_PACKAGE_kmod-tun=m
           # CONFIG_PACKAGE_kmod-usb-storage is not set
           # CONFIG_PACKAGE_kmod-usb-storage-extras is not set
           # CONFIG_PACKAGE_kmod-usb-storage-uas is not set
           # CONFIG_PACKAGE_libcap-ng is not set
-          # CONFIG_PACKAGE_libgmp is not set
-          # CONFIG_PACKAGE_libminiupnpc is not set
-          # CONFIG_PACKAGE_libnatpmp is not set
+          CONFIG_PACKAGE_libgmp=m
+          CONFIG_PACKAGE_libminiupnpc=m
+          CONFIG_PACKAGE_libnatpmp=m
           # CONFIG_PACKAGE_luci-app-accesscontrol is not set
           # CONFIG_PACKAGE_luci-app-arpbind is not set
-          # CONFIG_PACKAGE_luci-app-autoreboot is not set
-          # CONFIG_PACKAGE_luci-app-ddns is not set
+          CONFIG_PACKAGE_luci-app-autoreboot=m
+          CONFIG_PACKAGE_luci-app-ddns=m
           # CONFIG_PACKAGE_luci-app-filetransfer is not set
-          # CONFIG_PACKAGE_luci-app-ipsec-vpnd is not set
-          # CONFIG_PACKAGE_luci-app-nlbwmon is not set
-          # CONFIG_PACKAGE_luci-app-ramfree is not set
+          CONFIG_PACKAGE_luci-app-frpc=m
+          CONFIG_PACKAGE_luci-app-ipsec-vpnd=m
+          CONFIG_PACKAGE_luci-app-nlbwmon=m
+          CONFIG_PACKAGE_luci-app-ramfree=m
           # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_fuse-utils is not set
           # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-ng is not set
           # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-webui is not set
           # CONFIG_PACKAGE_luci-app-samba is not set
-          # CONFIG_PACKAGE_luci-app-sfe is not set
           # CONFIG_PACKAGE_luci-app-upnp is not set
-          # CONFIG_PACKAGE_luci-app-vlmcsd is not set
+          CONFIG_PACKAGE_luci-app-vlmcsd=m
           # CONFIG_PACKAGE_luci-app-vsftpd is not set
-          # CONFIG_PACKAGE_luci-app-webadmin is not set
+          CONFIG_PACKAGE_luci-app-webadmin=m
           # CONFIG_PACKAGE_luci-app-xlnetacc is not set
-          # CONFIG_PACKAGE_luci-app-zerotier is not set
+          CONFIG_PACKAGE_luci-app-zerotier=m
+          CONFIG_PACKAGE_luci-i18n-autoreboot-zh-cn=m
+          CONFIG_PACKAGE_luci-i18n-ddns-zh-cn=m
+          CONFIG_PACKAGE_luci-i18n-frpc-zh-cn=m
+          CONFIG_PACKAGE_luci-i18n-ipsec-vpnd-zh-cn=m
+          CONFIG_PACKAGE_luci-i18n-nlbwmon-zh-cn=m
+          CONFIG_PACKAGE_luci-i18n-ramfree-zh-cn=m
+          CONFIG_PACKAGE_luci-i18n-vlmcsd-zh-cn=m
+          CONFIG_PACKAGE_luci-i18n-webadmin-zh-cn=m
+          CONFIG_PACKAGE_luci-i18n-zerotier-zh-cn=m
           # CONFIG_PACKAGE_luci-lib-fs is not set
           # CONFIG_PACKAGE_miniupnpd is not set
-          # CONFIG_PACKAGE_nlbwmon is not set
+          CONFIG_PACKAGE_nlbwmon=m
           # CONFIG_PACKAGE_samba36-server is not set
-          # CONFIG_PACKAGE_strongswan is not set
-          # CONFIG_PACKAGE_vlmcsd is not set
+          CONFIG_PACKAGE_strongswan=m
+          CONFIG_PACKAGE_strongswan-charon=m
+          CONFIG_PACKAGE_strongswan-ipsec=m
+          CONFIG_PACKAGE_strongswan-minimal=m
+          CONFIG_PACKAGE_strongswan-mod-aes=m
+          CONFIG_PACKAGE_strongswan-mod-gmp=m
+          CONFIG_PACKAGE_strongswan-mod-hmac=m
+          CONFIG_PACKAGE_strongswan-mod-kernel-libipsec=m
+          CONFIG_PACKAGE_strongswan-mod-kernel-netlink=m
+          CONFIG_PACKAGE_strongswan-mod-nonce=m
+          CONFIG_PACKAGE_strongswan-mod-pubkey=m
+          CONFIG_PACKAGE_strongswan-mod-random=m
+          CONFIG_PACKAGE_strongswan-mod-sha1=m
+          CONFIG_PACKAGE_strongswan-mod-socket-default=m
+          CONFIG_PACKAGE_strongswan-mod-stroke=m
+          CONFIG_PACKAGE_strongswan-mod-updown=m
+          CONFIG_PACKAGE_strongswan-mod-x509=m
+          CONFIG_PACKAGE_strongswan-mod-xauth-generic=m
+          CONFIG_PACKAGE_strongswan-mod-xcbc=m
+          CONFIG_PACKAGE_vlmcsd=m
           # CONFIG_PACKAGE_vsftpd-alt is not set
           # CONFIG_PACKAGE_wsdd2 is not set
-          # CONFIG_PACKAGE_zerotier is not set
+          CONFIG_PACKAGE_zerotier=m
 
           EOF
 
@@ -145,8 +176,8 @@ jobs:
           sed -i "15i uci set network.lan.netmask='255.255.255.0'" ./package/lean/default-settings/files/zzz-default-settings
           # 主路由 IP 地址
           sed -i "16i uci set network.lan.gateway='192.168.1.1'" ./package/lean/default-settings/files/zzz-default-settings
-          # 国内 DNS 服务器
-          sed -i "17i uci set network.lan.dns='119.29.29.29'" ./package/lean/default-settings/files/zzz-default-settings
+          # 解析国内网站时，上游 DNS 服务器为主路由器
+          sed -i "17i uci set network.lan.dns='192.168.1.1'" ./package/lean/default-settings/files/zzz-default-settings
           sed -i "18i uci commit network\n" ./package/lean/default-settings/files/zzz-default-settings
 
       - name: Make download
